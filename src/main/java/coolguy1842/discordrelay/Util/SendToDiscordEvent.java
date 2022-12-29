@@ -15,6 +15,8 @@ public class SendToDiscordEvent extends Event {
     }
 
     public SendToDiscordEvent(String username, String avatar, String contents) {
+        super(true);
+        
         this.username = username;
         this.avatar = avatar;
         

@@ -48,5 +48,7 @@ public final class DiscordRelay extends JavaPlugin implements Listener {
 
     void registerEvents() {
         Globals.jda.addEventListener(listener);
+        
+        getServer().getPluginManager().registerEvents(listener, Globals.plugin);
     }
 }
