@@ -36,12 +36,9 @@ public final class DiscordRelay extends JavaPlugin implements Listener {
         Globals.jda.removeEventListener(listener);
         if(Globals.jda != null) Globals.jda.shutdownNow();
         
-        listener = null;
-
         Globals.webhook.close();
         Globals.webhook = null;
 
-        Globals.jda = null;
         Globals.config = null;
         Globals.plugin = null;
     }

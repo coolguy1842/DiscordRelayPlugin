@@ -23,15 +23,8 @@ repositories {
         }
     }
     
-    maven {
-        url = 'https://repo.papermc.io/repository/maven-public/'
-
-        // As of Gradle 5.1, you can limit this to only those
-        // dependencies you expect from it
-        content {
-            includeGroup 'io.papermc'
-        }
-    }
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    
     /*
     As Spigot-API depends on the BungeeCord ChatComponent-API,
     we need to add the Sonatype OSS repository, as Gradle,
@@ -64,9 +57,9 @@ dependencies {
     implementation 'com.google.guava:guava:30.1.1-jre'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
 
-    implementation 'io.papermc.paper:paper-api:1.19.2-R0.1-SNAPSHOT'
-    
-    implementation 'org.spigotmc:spigot:1.19.2-R0.1-SNAPSHOT'
+    implementation 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
+    implementation 'org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT'
+
     implementation 'net.dv8tion:JDA:5.0.0-beta.2'
     implementation 'club.minnced:discord-webhooks:0.8.2'
 }
